@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import reactLogo from '../assets/react.svg'
 
 
@@ -27,6 +28,16 @@ export const Home = () => {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+
+      <Link to={'/plan'}>
+        Ir a hacer tu plan
+      </Link>
+      
+      <Link to={'/thanks'} >
+        Dar las gracias
+      </Link>
+
+      <button>Gracias</button>
     </div>
     )
 }
