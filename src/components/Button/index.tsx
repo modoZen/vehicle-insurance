@@ -3,14 +3,16 @@ import './styles.sass'
 
 interface Props{
     text: string,
-    onClick?: ()=>void
+    onClick?: ()=>void,
+    className: string
 }
 
-const Button:FC<Props> = ({ text, onClick })=>{
+const Button:FC<Props> = ({ text, onClick, className })=>{
     return (
         <button 
+            className={`button ${className}`}
             onClick={onClick}
-            className="button">
+        >
             {text}
         </button>
     )

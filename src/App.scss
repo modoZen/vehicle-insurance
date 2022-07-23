@@ -1,16 +1,21 @@
 .App{
   display: grid;
+
 }
 
 .App-home{
   grid-template-rows: 100vh;
   grid-template-columns: 40% 60%;
-
+  grid-template-areas: "banner login";
 }
 
 .App-noHome{
   grid-template-rows: 64px calc(100vh - 64px);
   grid-template-columns: 30% 70%;
+  // grid-template-columns: 40% 60%;
+  grid-template-areas: "header header"
+  "banner login";
+
 }
 
 .container-banner{
@@ -23,15 +28,151 @@
   place-content: center;
 }
 
-
-@media (max-width:700px) {
-  .App-home{
-    grid-template-rows: 306px auto;
-    grid-template-columns: 100%;
-  }
+.imageMain{
+  background-image: url('./img/main_desk.svg');
+  width: 320px;
+  height: 250px;
 }
 
 
+// thanks page
+
+.thanks-left{
+  border-right: 1px solid #E4E8F7;
+  background-color: #F7F8FC;
+  position: relative;
+  grid-area: banner;
+}
+
+.thanks-right{
+  grid-area: login;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thanks-right-container{
+  width: 50%;
+  max-width: 450px
+}
+
+.thanks-left-image{
+  background-image: url(./img/thanks_desktop.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 33vw;
+  height: 448px;
+  position: absolute;
+  top: 25%;
+  left: 4vw;
+}
+
+.thanks-title{
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: -0.2px;
+  margin-bottom: 16px;
+}
+
+.thanks-title_gray{
+  color: var(--gray_1);
+}
+
+.thanks-title_red{
+  color: var(--red_rimac);
+}
+
+.thanks-paraph-container{
+  margin-bottom: 40px
+}
+
+.thanks-paraph{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--gray_2);
+}
+
+.thanks-paraph_bold{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--gray_2);
+}
+
+.thanks-button{
+  width: 255px;
+  height: 56px;
+}
+
+@media (max-width:800px) {
+  .App-home{
+    grid-template-rows: 306px auto;
+    grid-template-columns: 100%;
+    grid-template-areas: "banner"
+                          "login";
+  }
+
+  .App-noHome{
+    grid-template-rows: 56px 208px auto;
+    grid-template-columns: 30% 70%;
+    // grid-template-columns: 40% 60%;
+    grid-template-areas: "header header"
+                          "banner banner"
+                          "login login";
+  
+  }
+
+  .thanks-right-container{
+    margin-top: 40px;
+    width: 90%;
+    max-width: 280px;
+  }
+
+  .thanks-left{
+    background-image: url('./img/thanks_mobile.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: none;
+
+    
+    position: relative;
+    grid-area: banner;
+  }
+
+  .thanks-left-image{
+    background-image: none;
+    position: static;
+    width: 0;
+    height: 0;
+    // background-size: contain;
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // width: 33vw;
+    // height: 448px;
+    // top: 20%;
+    // left: 4vw;
+  }
+
+  .thanks-title{
+    font-size: 28px;
+  }
+
+  .thanks-button{
+    width: 280px;
+    max-width: 100%;
+  }
+  
+}
 
 // #root {
 //   max-width: 1280px;
