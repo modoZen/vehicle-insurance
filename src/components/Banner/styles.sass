@@ -2,7 +2,7 @@
     display: grid
     // grid-template-rows: 420px calc(100vh - 64px - 420px) 64px
     grid-template-rows: 50% calc( 100vh - 50% - 64px)
-    background-image: url('./background_banner.svg')
+    background-image: url('/background_banner.svg')
     background-position: center
     background-size: cover
     &__containerMain
@@ -10,7 +10,7 @@
         width: 80%
         justify-self: center
     &__imageMain
-        background-image: url('./img/main_desk.svg')
+        background-image: url('/img/main_desk.svg')
         background-size: 75% 62%
         background-repeat: no-repeat
         background-position: 100% 68%
@@ -24,6 +24,9 @@
 
     &_sectionTitle
         margin-bottom: 16px
+
+    &__containerInfo
+        margin-top: 40px
 
     &__title
         font-family: 'Lato'
@@ -84,7 +87,7 @@
 
 
         &__imageMain
-            background-image: url('./img/main_mobile.svg')
+            background-image: url('/img/main_mobile.svg')
             position: absolute
             background-size: unset
             top: 35px
