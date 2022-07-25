@@ -14,7 +14,6 @@ const uiSlice = createSlice({
     reducers:{
         toogleLoading: (state)=>{
             state.loading = !state.loading
-            console.info(state.loading)
         }
     }
 })

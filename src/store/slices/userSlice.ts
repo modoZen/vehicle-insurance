@@ -12,8 +12,8 @@ interface UserState{
 }
 
 const initialState: UserState = {
-    user: null,
-    isLogin: true
+    user: sessionStorage.getItem('user')!==null?JSON.parse(sessionStorage.getItem('user')!):null  ,
+    isLogin: Boolean(sessionStorage.getItem('user')!==null?JSON.parse(sessionStorage.getItem('user')!):null)
 }
 
 const userSlice = createSlice({
@@ -21,10 +21,12 @@ const userSlice = createSlice({
     initialState,
     reducers:{
         setUser: (state, action)=>{
+            sessionStorage.setItem('user', JSON.stringify(action.payload))
             state.user = action.payload
             state.isLogin = true
         },
-        removeUser: (state, action) =>{
+        removeUser: (state) =>{
+            sessionStorage.removeItem('user')
             state.user = null,
             state.isLogin = false
         }
