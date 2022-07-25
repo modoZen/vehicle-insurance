@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import ic_phone from '../../assets/ic_phone.svg'
-import logo_rimac from '../../assets/logo_rimac.svg'
+import logo_rimac from '../../assets/rimac_logo.svg'
 import './styles.sass'
 
 interface Props{
