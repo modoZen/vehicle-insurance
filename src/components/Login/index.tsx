@@ -50,7 +50,7 @@ export const Login = () => {
     const { register, handleSubmit, formState: { errors }, watch} = useForm<Inputs>();
     
     const onSubmit: SubmitHandler<Inputs> = async  (data) =>{
-        console.log(data)
+        console.log('la data',data)
         const { agreement, ...user  } = data;
         try {
             dispatch(toogleLoading())
@@ -67,14 +67,18 @@ export const Login = () => {
     <div className="login" >   
         <form className='login__container' onSubmit={handleSubmit(onSubmit)}>
             <span className='login__title' >Déjanos tus datos</span>
-            <div className='login--inputs'>
-                <span className='login-document label'>
-                    <select {...register('typeDoc')} >
+            <div className='login__inputs'>
+                <span className='login__label login__label--flex'>
+                    <select 
+                        className='login__select'
+                        {...register('typeDoc')} 
+                    >
                         {options.map(option=>(
                             <option key={option.value} value={option.value}>{option.text}</option>
                         ))}
                     </select>
                     <input 
+                        className='login__input login__input--part'
                         type={'text'} 
                         placeholder='Nro. de doc' 
                         {...register('nroDoc', 
@@ -89,22 +93,22 @@ export const Login = () => {
                             }
                         )}
                     />
-                    {errors.nroDoc && <p className='message-error'>{errors.nroDoc?.message}</p>}
+                    {errors.nroDoc && <p className='login__message login__message--error'>{errors.nroDoc?.message}</p>}
                 </span>
-                <label className='label' htmlFor='phone' >
+                <label className='login__label' htmlFor='phone' >
                     <input 
-                        className='input' 
+                        className='login__input' 
                         {...register("phone", { 
                             pattern: {value:/[0-9]{9}/ , message: 'Debe agregar 9 números'} ,  
                             required: 'Debe llenar este campo'})
                         } type={'tel'} 
                         placeholder='Celular'  
                     />
-                    {errors.phone?.message && <p className='message-error'>{errors.phone?.message}</p>}
+                    {errors.phone?.message && <p className='login__message login__message--error'>{errors.phone?.message}</p>}
                 </label>
-                <label className='label' htmlFor='phone' >
+                <label className='login__label' htmlFor='plate' >
                 <input 
-                    className='input' 
+                    className='login__input' 
                     {...register('plate', { 
                         required: 'Debe llenar este campo',
                         pattern: {
@@ -115,15 +119,15 @@ export const Login = () => {
                     type={'text'}  
                     placeholder='Placa' 
                 />
-                {errors.plate?.message && <p className='message-error'>{errors.plate?.message}</p>}
+                {errors.plate?.message && <p className='login__message login__message--error'>{errors.plate?.message}</p>}
                 </label>
             </div>
-            <span className='login-condition label'>
+            <span className='login__label login__label--condition'>
                 <input {...register('agreement', { required: 'Debe aceptar los terminos'})} type={'checkbox'} />
-                <span>
-                    Acepto la Política de <a>Protecciòn de Datos Personales</a> y los <a>Términos y Condiciones.</a> 
+                <span className='login__politics'>
+                    Acepto la Política de <a className='login__links'>Protecciòn de Datos Personales</a> y los <a className='login__links'>Términos y Condiciones.</a> 
                 </span>
-                {errors.agreement?.message && <p className='message-error'>{errors.agreement?.message}</p>}
+                {errors.agreement?.message && <p className='login__message login__message--error'>{errors.agreement?.message}</p>}
             </span>
             <Button text="COTÍZALO" className='button--home'/>
             {loading && <Loader />}
