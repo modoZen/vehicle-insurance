@@ -1,16 +1,20 @@
 .login
+  display: flex
+  place-content: center
+
+.login__container
     display: flex
     flex-wrap: wrap
     align-content: center
     width: 288px
 
-.login-title
+.login__title
     color: #494F66
     font-size: 28px
     width: 100%
     margin-bottom: 24px
 
-.login-inputs
+.login--inputs
     display: grid
     grid-template-rows: repeat(3,56px)
     grid-template-columns: 288px
@@ -62,3 +66,9 @@
     color: red  
     position: absolute
     top: 37px
+
+@media (max-width:800px)
+    .login
+
+        &__container
+            margin-top: 40px

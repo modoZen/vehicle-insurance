@@ -1,39 +1,9 @@
-.App{
+//home page
+
+.login-left{
   display: grid;
-
+  grid-template-rows: 56px calc(100vh - 56px);
 }
-
-.App-home{
-  grid-template-rows: 100vh;
-  grid-template-columns: 40% 60%;
-  grid-template-areas: "banner login";
-}
-
-.App-noHome{
-  grid-template-rows: 64px calc(100vh - 64px);
-  grid-template-columns: 30% 70%;
-  // grid-template-columns: 40% 60%;
-  grid-template-areas: "header header"
-  "banner login";
-
-}
-
-.container-banner{
-  background-image: url('./background_banner.svg');
-  background-position: center;
-  background-size: cover;
-}
-.container-login{
-  display: flex;
-  place-content: center;
-}
-
-.imageMain{
-  background-image: url('./img/main_desk.svg');
-  width: 320px;
-  height: 250px;
-}
-
 
 // thanks page
 
@@ -41,11 +11,11 @@
   border-right: 1px solid #E4E8F7;
   background-color: #F7F8FC;
   position: relative;
-  grid-area: banner;
+  grid-area: sidebar;
 }
 
 .thanks-right{
-  grid-area: login;
+  grid-area: main;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -108,28 +78,8 @@
   color: var(--gray_2);
 }
 
-.thanks-button{
-  width: 255px;
-  height: 56px;
-}
-
 @media (max-width:800px) {
-  .App-home{
-    grid-template-rows: 306px auto;
-    grid-template-columns: 100%;
-    grid-template-areas: "banner"
-                          "login";
-  }
-
-  .App-noHome{
-    grid-template-rows: 56px 208px auto;
-    grid-template-columns: 30% 70%;
-    // grid-template-columns: 40% 60%;
-    grid-template-areas: "header header"
-                          "banner banner"
-                          "login login";
   
-  }
 
   .thanks-right-container{
     margin-top: 40px;
@@ -146,7 +96,7 @@
 
     
     position: relative;
-    grid-area: banner;
+    grid-area: sidebar;
   }
 
   .thanks-left-image{
@@ -154,22 +104,10 @@
     position: static;
     width: 0;
     height: 0;
-    // background-size: contain;
-    // background-repeat: no-repeat;
-    // background-position: center;
-    // width: 33vw;
-    // height: 448px;
-    // top: 20%;
-    // left: 4vw;
   }
 
   .thanks-title{
     font-size: 28px;
-  }
-
-  .thanks-button{
-    width: 280px;
-    max-width: 100%;
   }
   
 }

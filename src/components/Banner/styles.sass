@@ -1,0 +1,116 @@
+.banner
+    display: grid
+    // grid-template-rows: 420px calc(100vh - 64px - 420px) 64px
+    grid-template-rows: 50% calc( 100vh - 50% - 64px)
+    background-image: url('./background_banner.svg')
+    background-position: center
+    background-size: cover
+    &__containerMain
+        height: 100%
+        width: 80%
+        justify-self: center
+    &__imageMain
+        background-image: url('./img/main_desk.svg')
+        background-size: 75% 62%
+        background-repeat: no-repeat
+        background-position: 100% 68%
+        width: 100%
+        height: 100%
+    
+    &__containerInfo
+        width: 50%
+        min-width: 250px
+        justify-self: center
+
+    &_sectionTitle
+        margin-bottom: 16px
+
+    &__title
+        font-family: 'Lato'
+        font-style: normal
+        font-weight: 400
+        font-size: 36px
+        line-height: 48px
+        letter-spacing: -0.2px
+        color: #494F66
+
+    &__title--less
+        font-weight: 700
+        font-size: 12px
+        line-height: 16px
+        letter-spacing: 0.8px
+
+    &__title--red_rimac
+        color: var(--red_rimac)
+
+    &__paragraph
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 400
+        font-size: 14px
+        line-height: 24px
+        display: flex
+        align-items: center
+        color: #676F8F
+    &__footer
+        display: flex
+        place-content: center
+
+    &__rights
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 300
+        font-size: 12px
+        line-height: 20px
+        letter-spacing: 0.2px
+        color: #A3ABCC
+
+        display: flex
+        align-items: center
+        justify-content: center
+
+@media (max-width:800px)
+    .banner
+        background-image: none
+        background-color: #FAFBFF
+
+        grid-template-rows: auto
+
+        grid-template-columns: 60% 40%
+
+        &__containerMain
+            width: 100%
+            position: relative
+
+
+        &__imageMain
+            background-image: url('./img/main_mobile.svg')
+            position: absolute
+            background-size: unset
+            top: 35px
+            // width: 320px
+            // height: 250px
+            
+
+        &__containerInfo
+            grid-row: 1
+            min-width: unset
+            width: 65%
+
+
+
+        &_sectionTitle
+            margin-bottom: 12px
+        &__title
+            font-size: 28px
+            line-height: 36px
+
+        &__title--less
+            font-size: 10px
+            line-height: 16px
+        
+        &__footer
+            display: none
+
+        &__containerInfo
+            align-self: center

@@ -17,7 +17,7 @@ const Thanks = () =>{
                         <p className="thanks-paraph">Enviaremos la confirmación de compra de tu Plan Vehícular Tracking a tu correo:</p>
                         <p className="thanks-paraph_bold">joel.sanchez@gmail.com</p>
                     </div>
-                    <Button text="CÓMO USAR MI SEGURO" className="thanks-button" />
+                    <Button text="CÓMO USAR MI SEGURO" className="button--thanks" />
                 </div>
             </div>  
         </Layout>

@@ -1,0 +1,35 @@
+.App{
+    display: grid;
+
+    &--home{
+        grid-template-rows: 100vh;
+        grid-template-columns: 40% 60%;
+        grid-template-areas: "sidebar main";
+    }
+
+    &--noHome{
+        grid-template-rows: 64px calc(100vh - 64px);
+        grid-template-columns: 30% 70%;
+        // grid-template-columns: 40% 60%;
+        grid-template-areas: "header header"
+                            "sidebar main";
+    }
+}
+
+@media (max-width: 800px) {
+    .App--home{
+        grid-template-rows: 310px auto;
+        grid-template-columns: 100%;
+        grid-template-areas: "sidebar"
+                              "main";
+    }
+    
+    .App--noHome{
+        grid-template-rows: 56px 208px auto;
+        grid-template-columns: 30% 70%;
+        // grid-template-columns: 40% 60%;
+        grid-template-areas: "header header"
+                                "sidebar sidebar"
+                                "main main";
+    }
+}

@@ -1,18 +1,22 @@
 * {
   box-sizing: border-box;
-  font-family: 'Lato';
+  margin: 0
 }
 
 body {
-  margin: 0;
-  /* display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh; */
+  font-family: 'Lato';
+  height: 100vh;
 }
 
 :root {
-  font-family: 'Lato';
+  --gray_1 : #494F66;
+  --gray_2 : #676F8F;
+  --gray_3 : #A3ABCC;
+  --red_rimac: #EF3340;
+}
+
+#root {
+  min-height: 100vh;
 }
 
 

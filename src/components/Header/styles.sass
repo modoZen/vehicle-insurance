@@ -1,25 +1,47 @@
 .header
+    // display: flex
+    // align-items: center
+    // justify-content: space-between
+    // max-width: 1250px
+    // width: 80%
+    // margin: 0 auto
+    // grid-column: span 2
+
+    grid-area: header
+    display: grid
+    grid-template-columns: 40% 60%
+    
+
+.header--borderB
+    border-bottom: 1px solid #E4E8F7
+
+.header--home
+    position: fixed
+    height: 56px
+    width: 100%    
+
+.header__left
+    align-self: center
+    justify-self: end
+    width: 70%
+
+.header__right
+    width: 90%
+    align-self: center
     display: flex
     align-items: center
-    justify-content: space-between
-    max-width: 1250px
-    width: 80%
-    margin: 0 auto
-    grid-column: span 2
+    justify-content: end
 
-.header-right
-    display: flex
-
-.question
+.header__question
     margin-right: 20px
     color: #676F8F
 
-.phone
+.header__phone
     display: flex
     color: #6F7DFF
     img
         margin-right: 4px
 
 @media (max-width:600px) 
-    .question
+    .header__question
         display: none

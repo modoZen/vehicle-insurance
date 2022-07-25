@@ -13,7 +13,7 @@ interface UserState{
 
 const initialState: UserState = {
     user: null,
-    isLogin: false
+    isLogin: true
 }
 
 const userSlice = createSlice({
