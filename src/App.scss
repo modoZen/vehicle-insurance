@@ -1,32 +1,280 @@
-//home page
+.makeplan__aside{
+  border-right: 1px solid #E4E8F7;
+  background-color: #F7F8FC;
+  grid-area: sidebar;
+  position: relative;
 
-.login-left{
+
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.makeplan__steps{
   display: grid;
-  grid-template-rows: 56px calc(100vh - 56px);
+  grid-template-columns: 24px 100px;
+  grid-auto-rows: 24px;
+  column-gap: 20px;
+  row-gap: 30px;
+}
+
+.makeplan__count{
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  color: #C5CBE0;
+
+  place-self: center;
+  
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #C5CBE0;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  text-align: center;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.makeplan__count--activate{
+  background: #6F7DFF;
+  color: #FFFFFF;
+}
+
+.makeplan__name{
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #A3ABCC;
+
+  align-self: center;
+}
+
+.makeplan__name--activate{
+  color: #494F66;
+}
+
+.makeplan__main{
+  overflow: auto;
+  display: grid;
+  grid-template-columns: 65% 35%;
+}
+
+.makeplan__firstSection{
+  display: grid;
+  justify-content: center;
+}
+
+.makeplan__subfirstSection{
+  margin-top: 24px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #E4E8F7;
+  padding-bottom: 40px;
+}
+
+.makeplan__backSection{
+  
+  display: flex;
+  align-items: center;
+
+}
+
+.makeplan__backImg{
+  margin-right: 16px;
+}
+
+.makeplan__title{
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -0.6px;
+  color: #494F66;
+}
+
+.makeplan__title--coverage{
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.makeplan__title--assured{
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+}
+
+.makeplan__limitsSection{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.makeplan__paraph{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #676F8F;
+}
+
+.makeplan__text{
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--gray_3);
+}
+
+.makeplan__text5{
+  color: #E4E8F7;
+}
+
+.makeplan__plateSection{
+  background: #FFFFFF;
+  border: 3px solid #F0F2FA;
+  border-radius: 12px;
+  margin-bottom: 55px;
+  display: flex;
+  margin-top: 44px;
+}
+
+.makeplan__sumAssuredSection{
+  display: flex;
+  justify-content: space-between;
+}
+
+.makeplan__mountCard{
+  border: 1px solid #C5CBE0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
+}
+
+.makeplan__modifySum{
+  color: #6F7DFF;
+  padding: 0px 10px;
+  cursor: pointer;
+}
+
+.makeplan__secondSection{
+  // display: flex;
+  // justify-content: center;
+  padding-top: 100px;
+}
+
+.makeplan__types{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 384px;
+}
+
+.makeplan__type{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--gray_1);
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 16px;
+  border-bottom: 1px solid #E4E8F7;
+  padding: 24px 15px;
+}
+
+.makeplan__type--activate{
+  color: var(--red_rimac);
+  border-bottom: 2px solid var(--red_rimac);
+}
+
+.makeplan__includedSection{
+  padding-top: 19px;
+  margin-top: 24px;
+  border-top: 1px solid #E4E8F7;
+  width: 224px;
+  margin-bottom: 24px;
+}
+
+.makeplan__mountTitle{
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -0.2px;
+  color: #494F66;
+}
+
+.makeplan__mountTitle--name{
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.6px;
+}
+
+.makeplan__mountParaph{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #676F8F;
+}
+
+.makeplan__includedTitle{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #494F66;
+  margin-bottom: 12px;
+}
+
+.makeplan__includedParaph{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #676F8F;
+  display: flex;
+}
+
+.makeplan__vineta{
+  margin-right: 20px;
 }
 
 // thanks page
 
-.thanks-left{
+.thanks__aside{
   border-right: 1px solid #E4E8F7;
   background-color: #F7F8FC;
   position: relative;
   grid-area: sidebar;
 }
 
-.thanks-right{
-  grid-area: main;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.thanks-right-container{
-  width: 50%;
-  max-width: 450px
-}
-
-.thanks-left-image{
+.thanks__asideImage{
   background-image: url(/img/thanks_desktop.svg);
   background-size: contain;
   background-repeat: no-repeat;
@@ -38,29 +286,41 @@
   left: 4vw;
 }
 
-.thanks-title{
+.thanks__main{
+  grid-area: main;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thanks__container{
+  width: 50%;
+  max-width: 450px
+}
+
+.thanks-titleSection{
+  margin-bottom: 16px;
+}
+
+.thanks__title{
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
   line-height: 48px;
   letter-spacing: -0.2px;
-  margin-bottom: 16px;
-}
-
-.thanks-title_gray{
   color: var(--gray_1);
 }
 
-.thanks-title_red{
+.thanks__title--red{
   color: var(--red_rimac);
 }
 
-.thanks-paraph-container{
+.thanks__paraphSection{
   margin-bottom: 40px
 }
 
-.thanks-paraph{
+.thanks__paraph{
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 300;
@@ -69,25 +329,20 @@
   color: var(--gray_2);
 }
 
-.thanks-paraph_bold{
-  font-family: 'Roboto';
-  font-style: normal;
+.thanks__paraph--bold{
   font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
-  color: var(--gray_2);
 }
 
 @media (max-width:800px) {
   
 
-  .thanks-right-container{
+  .thanks__container{
     margin-top: 40px;
     width: 90%;
     max-width: 280px;
   }
 
-  .thanks-left{
+  .thanks__aside{
     background-image: url('/img/thanks_mobile.svg');
     background-repeat: no-repeat;
     background-position: center;
@@ -99,14 +354,14 @@
     grid-area: sidebar;
   }
 
-  .thanks-left-image{
+  .thanks__asideImage{
     background-image: none;
     position: static;
     width: 0;
     height: 0;
   }
 
-  .thanks-title{
+  .thanks__title{
     font-size: 28px;
   }
   

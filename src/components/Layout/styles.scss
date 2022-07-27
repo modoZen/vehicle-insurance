@@ -10,7 +10,6 @@
     &--noHome{
         grid-template-rows: 64px calc(100vh - 64px);
         grid-template-columns: 30% 70%;
-        // grid-template-columns: 40% 60%;
         grid-template-areas: "header header"
                             "sidebar main";
     }
