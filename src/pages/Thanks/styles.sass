@@ -1,0 +1,99 @@
+
+.thanks__aside
+  border-right: 1px solid #E4E8F7
+  background-color: #F7F8FC
+  position: relative
+  grid-area: sidebar
+
+
+.thanks__asideImage
+  background-image: url(/img/thanks_desktop.svg)
+  background-size: contain
+  background-repeat: no-repeat
+  background-position: center
+  width: 33vw
+  height: 448px
+  position: absolute
+  top: 25%
+  left: 4vw
+
+
+.thanks__main
+  grid-area: main
+  display: flex
+  align-items: center
+  justify-content: center
+
+
+.thanks__container
+  width: 50%
+  max-width: 450px
+
+
+.thanks-titleSection
+  margin-bottom: 16px
+
+
+.thanks__title
+  font-family: 'Lato'
+  font-style: normal
+  font-weight: 400
+  font-size: 36px
+  line-height: 48px
+  letter-spacing: -0.2px
+  color: var(--gray_1)
+
+
+.thanks__title--red
+  color: var(--red_rimac)
+
+
+.thanks__paraphSection
+  margin-bottom: 40px
+
+
+.thanks__paraph
+  font-family: 'Roboto'
+  font-style: normal
+  font-weight: 300
+  font-size: 16px
+  line-height: 28px
+  color: var(--gray_2)
+
+
+.thanks__paraph--bold
+  font-weight: 400
+
+
+
+@media (max-width:800px) 
+  .thanks__container
+    margin-top: 40px
+    width: 90%
+    max-width: 280px
+  
+
+  .thanks__aside
+    background-image: url('/img/thanks_mobile.svg')
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    border: none
+
+    
+    position: relative
+    grid-area: sidebar
+  
+
+  .thanks__asideImage
+    background-image: none
+    position: static
+    width: 0
+    height: 0
+  
+
+  .thanks__title
+    font-size: 28px
+  
+  
+

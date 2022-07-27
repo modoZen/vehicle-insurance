@@ -1,15 +1,16 @@
 import { Link, useNavigate } from "react-router-dom";
-import { Layout } from "../components/Layout";
-import { useAppDispatch, useAppSelector } from "../store";
-import { removeUser } from "../store/slices/userSlice";
-import icon_back from '../assets/icon_back.svg'
-import img_person from '../assets/img_person.svg'
-import { Coverage } from "../components/Coverage";
-import { Button } from "../components/Button";
-import icon_check from '../assets/icon_check.svg'
+import { Layout } from "../../components/Layout";
+import { useAppDispatch, useAppSelector } from "../../store";
+import { removeUser } from "../../store/slices/userSlice";
+import icon_back from '../../assets/icon_back.svg'
+import img_person from '../../assets/img_person.svg'
+import { Coverage } from "../../components/Coverage";
+import { Button } from "../../components/Button";
+import icon_check from '../../assets/icon_check.svg'
 import { useEffect, useState } from "react";
-import { addCoverage, removeCoverage } from "../store/slices/coverageReducer";
-import { useGetMountTotalFormated } from "../hooks/useGetMountTotalFormated";
+import { addCoverage, removeCoverage } from "../../store/slices/coverageReducer";
+import { useGetMountTotalFormated } from "../../hooks/useGetMountTotalFormated";
+import './styles.sass'
 
 export interface ICoverage{
     title: string,
@@ -56,16 +57,15 @@ const MAX_SUM = 16500;
 
 export const MakePlan = () => {
     const navigator = useNavigate();
-
-    const [sumAssured, setsumAssured] = useState(14300);
-    const sumAssuredFormat = sumAssured.toLocaleString("en-US",{style:"currency",currency:"USD", minimumFractionDigits: 0});
-    
     const dispatch = useAppDispatch();
 
     const { mountTotalFormat, list } = useGetMountTotalFormated();
 
-    const thereIsChoque = list.some(item=>item.title==='Choque y/o pasarte la luz roja')
 
+    const [sumAssured, setsumAssured] = useState(14300);
+    const sumAssuredFormat = sumAssured.toLocaleString("en-US",{style:"currency",currency:"USD", minimumFractionDigits: 0});
+    
+    const thereIsChoque = list.some(item=>item.title==='Choque y/o pasarte la luz roja')
     useEffect(()=>{
         if(sumAssured > 16000 && thereIsChoque){
             dispatch(removeCoverage(coverages.find(item=>item.title==='Choque y/o pasarte la luz roja')))
@@ -110,8 +110,10 @@ export const MakePlan = () => {
                         <p className="makeplan__title">Hola, {user?.name}</p>
                         <p className="makeplan__paraph">Conoce las coberturas para tu plan</p>
                         <div className="makeplan__plateSection">
-                            <p>Tu placa es {user?.plate}</p>
-                            <p>Wolkswagen 2019 Golf</p>
+                            <div className="makeplan__plateContainer">
+                                <p className="makeplan__plate">Placa: {user?.plate}</p>
+                                <p className="makeplan__brand">Wolkswagen 2019 Golf</p>
+                            </div>
                             <img src={img_person} alt="img_person" />
                         </div>
                         <div className="makeplan__sumAssuredSection">
@@ -147,7 +149,7 @@ export const MakePlan = () => {
                         </div>
                         <div>
                             {coverages.map(coverage=>(
-                            <Coverage key={coverage.title} {...coverage} />      
+                                <Coverage key={coverage.title} {...coverage} />      
                             ))}
                             
                         </div>
@@ -172,7 +174,7 @@ export const MakePlan = () => {
                         </div>
                     </div>
                     <Link to={'/thanks'}>
-                    <Button text="LO QUIERO" className="button--plan" />
+                        <Button text="LO QUIERO" className="button--plan" />
                     </Link>
                 </div>
             </div>

@@ -4,7 +4,6 @@ import { MakePlan } from '../pages/MakePlan';
 import { Thanks } from '../pages/Thanks';
 import { NotFound } from '../pages/NotFound';
 import { useAppSelector } from '../store';
-import '../App.scss'
 import '../index.css'
 
 function App() {

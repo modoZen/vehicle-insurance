@@ -1,0 +1,295 @@
+.makeplan
+
+    &__aside
+        border-right: 1px solid #E4E8F7
+        background-color: #F7F8FC
+        grid-area: sidebar
+        position: relative
+
+
+        display: flex
+        justify-content: center
+        padding-top: 40px
+
+
+    &__steps
+        display: grid
+        grid-template-columns: 24px 100px
+        grid-auto-rows: 24px
+        column-gap: 20px
+        row-gap: 30px
+
+
+    &__count
+        font-family: 'Lato'
+        font-style: normal
+        font-weight: 700
+        font-size: 12px
+        line-height: 16px
+        color: #C5CBE0
+
+        place-self: center
+        
+        width: 24px
+        height: 24px
+        border-radius: 50%
+        border: 1px solid #C5CBE0
+        
+        display: flex
+        justify-content: center
+        align-items: center
+        
+        text-align: center
+        letter-spacing: 0.6px
+        text-transform: uppercase
+
+
+    &__count--activate
+        background: #6F7DFF
+        color: #FFFFFF
+
+
+    &__name
+        font-family: 'Lato'
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 24px
+        letter-spacing: 0.2px
+        color: #A3ABCC
+
+        align-self: center
+
+
+    &__name--activate
+        color: #494F66
+
+
+    &__main
+        overflow: auto
+        display: grid
+        grid-template-columns: 65% 35%
+
+
+    &__firstSection
+        display: grid
+        justify-content: center
+
+
+    &__subfirstSection
+        margin-top: 48px
+        margin-bottom: 50px
+        border-bottom: 1px solid #E4E8F7
+        padding-bottom: 40px
+
+
+    &__backSection
+        
+        display: flex
+        align-items: center
+        margin-bottom: 28px 
+
+
+
+    &__backImg
+        margin-right: 16px
+
+
+    &__title
+        font-family: 'Lato'
+        font-style: normal
+        font-weight: 400
+        font-size: 40px
+        line-height: 48px
+        letter-spacing: -0.6px
+        color: #494F66
+
+
+    &__title--coverage
+        font-size: 20px
+        line-height: 28px
+
+
+    &__title--assured
+        font-size: 16px
+        line-height: 24px
+        letter-spacing: 0.2px
+
+
+    &__limitsSection
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+
+    &__paraph
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 28px
+        color: #676F8F
+
+
+    &__text
+        font-family: 'Lato'
+        font-style: normal
+        font-weight: 400
+        font-size: 12px
+        line-height: 16px
+        letter-spacing: 0.6px
+        text-transform: uppercase
+        color: var(--gray_3)
+
+
+    &__text5
+        color: #E4E8F7
+
+
+    &__plateSection
+        background: #FFFFFF
+        border: 3px solid #F0F2FA
+        border-radius: 12px
+        margin-bottom: 55px
+        display: flex
+        margin-top: 44px
+        justify-content: center
+
+    &__plateContainer
+        display: grid
+        align-content: center
+        margin-left: 10px
+        margin-bottom: 10px
+
+    &__plate
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 400
+        font-size: 12px
+        line-height: 20px
+        letter-spacing: 0.2px
+        color: #A3ABCC
+
+    &__brand
+        font-family: 'Lato'
+        font-style: normal
+        font-weight: 400
+        font-size: 20px
+        line-height: 28px
+        display: flex
+        align-items: center
+
+        color: #494F66
+
+
+    &__sumAssuredSection
+        display: flex
+        justify-content: space-between
+
+
+    &__mountCard
+        border: 1px solid #C5CBE0
+        border-radius: 8px
+        display: flex
+        align-items: center
+        padding: 10px 10px
+
+
+    &__modifySum
+        color: #6F7DFF
+        padding: 0px 10px
+        cursor: pointer
+
+
+    &__secondSection
+        // display: flex
+        // justify-content: center
+        padding-top: 100px
+
+
+    &__types
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        max-width: 384px
+
+
+    &__type
+        display: flex
+        align-items: center
+        text-align: center
+        letter-spacing: 0.8px
+        text-transform: uppercase
+        color: var(--gray_1)
+        font-family: 'Lato'
+        font-style: normal
+        font-weight: 700
+        font-size: 10px
+        line-height: 16px
+        border-bottom: 1px solid #E4E8F7
+        padding: 24px 15px
+
+
+    &__type--activate
+        color: var(--red_rimac)
+        border-bottom: 2px solid var(--red_rimac)
+
+
+    &__includedSection
+        padding-top: 19px
+        margin-top: 24px
+        border-top: 1px solid #E4E8F7
+        width: 224px
+        margin-bottom: 24px
+
+
+    &__mountTitle
+        font-family: 'Lato'
+        font-style: normal
+        font-weight: 400
+        font-size: 28px
+        line-height: 36px
+        letter-spacing: -0.2px
+        color: #494F66
+
+
+    &__mountTitle--name
+        font-weight: 700
+        font-size: 12px
+        line-height: 16px
+        letter-spacing: 0.6px
+
+
+    &__mountParaph
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 400
+        font-size: 12px
+        line-height: 20px
+        letter-spacing: 0.2px
+        color: #676F8F
+
+
+    &__includedTitle
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 24px
+        letter-spacing: 0.2px
+        color: #494F66
+        margin-bottom: 12px
+
+
+    &__includedParaph
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 400
+        font-size: 14px
+        line-height: 24px
+        display: flex
+        align-items: center
+        color: #676F8F
+        display: flex
+
+
+    &__vineta
+        margin-right: 20px

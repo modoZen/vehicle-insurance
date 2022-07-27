@@ -17,7 +17,6 @@ const coverageSlice = createSlice({
     reducers: {
         addCoverage: (state, action)=>{
             state.list.push(action.payload);
-            console.log(state.list.length)
         },
         removeCoverage: (state, action)=>{
             state.list = state.list.filter(item=>item.title != action.payload.title);
