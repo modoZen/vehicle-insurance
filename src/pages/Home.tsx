@@ -4,7 +4,10 @@ import { Login } from "../components/Login";
 
 export const Home = () => {  
     return (
-    <Layout>
+    <Layout
+      title="Home"
+      subtitle="Aqui podras dejar tus datos"
+    >
       <Banner />
       <Login />
     </Layout>

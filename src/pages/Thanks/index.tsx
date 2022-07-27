@@ -4,7 +4,10 @@ import './styles.sass'
 
 const Thanks = () =>{
     return (
-        <Layout>
+        <Layout
+            title="Arigato"
+            subtitle="Gracias por elegirnos, ahora puedes aprender a usar el seguro"
+        >
             <div className="thanks__aside">
                 <div className="thanks__asideImage"></div>
             </div>

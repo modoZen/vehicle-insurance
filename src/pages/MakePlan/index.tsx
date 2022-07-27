@@ -93,7 +93,10 @@ export const MakePlan = () => {
     const user = useAppSelector(state=>state.user.user);
 
     return (
-        <Layout>
+        <Layout
+            title="Arma tu plan"
+            subtitle="Aqui podras elegir las cobertura de seguro vehicular"
+        >
             <div className="makeplan__aside">
                 <div className="makeplan__steps">
                     <span className="makeplan__count">1</span><span className="makeplan__name">Datos</span>
