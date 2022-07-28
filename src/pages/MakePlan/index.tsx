@@ -109,17 +109,23 @@ export const MakePlan = () => {
                         <div className="makeplan__subfirstSection">
                             <div className="makeplan__backSection">
                                 <img className="makeplan__backImg" onClick={comeBackHandler} src={icon_back} alt="icon_back" />
-                                <span className="makeplan__text">volver</span>
+                                <span className="makeplan__text makeplan__text--noneM">volver</span>
+                                <span className="makeplan__text makeplan__text--visiM">Paso 2 de 2</span>
+                                <div className="makeplan__barAdvace"></div>
                             </div>
-                            <p className="makeplan__title">Hola, {user?.name}</p>
-                            <p className="makeplan__paraph">Conoce las coberturas para tu plan</p>
-                            <div className="makeplan__plateSection">
-                                <div className="makeplan__plateContainer">
-                                    <p className="makeplan__plate">Placa: {user?.plate}</p>
-                                    <p className="makeplan__brand">Wolkswagen 2019 Golf</p>
+                            <div className="makeplan__dataSection">
+                                <p className="makeplan__title makeplan__title--noneM">Hola, {user?.name}</p>
+                                <p className="makeplan__title makeplan__title--visiM makeplan__title--dataS">Mira las coberturas</p>
+                                <p className="makeplan__paraph makeplan__paraph--dataS">Conoce las coberturas para tu plan</p>
+                                <div className="makeplan__plateSection">
+                                    <div className="makeplan__plateContainer">
+                                        <p className="makeplan__plate">Placa: {user?.plate}</p>
+                                        <p className="makeplan__brand">Wolkswagen 2019 Golf</p>
+                                    </div>
+                                    <img src={img_person} alt="img_person" />
                                 </div>
-                                <img src={img_person} alt="img_person" />
                             </div>
+                            
                             <div className="makeplan__sumAssuredSection">
                                 <div>
                                     <span className="makeplan__title makeplan__title--assured">Indica la suma asegurada</span>
