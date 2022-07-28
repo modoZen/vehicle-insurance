@@ -1,99 +1,107 @@
+.thanks
+  display: grid
+  grid-template-columns: 30% 70%
+  grid-area: noHeader 
 
-.thanks__aside
-  border-right: 1px solid #E4E8F7
-  background-color: #F7F8FC
-  position: relative
-  grid-area: sidebar
-
-
-.thanks__asideImage
-  background-image: url(/img/thanks_desktop.svg)
-  background-size: contain
-  background-repeat: no-repeat
-  background-position: center
-  width: 33vw
-  height: 448px
-  position: absolute
-  top: 25%
-  left: 4vw
+  &__aside
+    border-right: 1px solid #E4E8F7
+    background-color: #F7F8FC
+    position: relative
+    // grid-area: sidebar
 
 
-.thanks__main
-  grid-area: main
-  display: flex
-  align-items: center
-  justify-content: center
+  &__asideImage
+    background-image: url(/img/thanks_desktop.svg)
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+    width: 33vw
+    height: 448px
+    position: absolute
+    top: 25%
+    left: 4vw
 
 
-.thanks__container
-  width: 50%
-  max-width: 450px
+  &__main
+    // grid-area: main
+    display: flex
+    align-items: center
+    justify-content: center
 
 
-.thanks-titleSection
-  margin-bottom: 16px
+  &__container
+    width: 50%
+    max-width: 450px
 
 
-.thanks__title
-  font-family: 'Lato'
-  font-style: normal
-  font-weight: 400
-  font-size: 36px
-  line-height: 48px
-  letter-spacing: -0.2px
-  color: var(--gray_1)
+  &-titleSection
+    margin-bottom: 16px
 
 
-.thanks__title--red
-  color: var(--red_rimac)
+  &__title
+    font-family: 'Lato'
+    font-style: normal
+    font-weight: 400
+    font-size: 36px
+    line-height: 48px
+    letter-spacing: -0.2px
+    color: var(--gray_1)
 
 
-.thanks__paraphSection
-  margin-bottom: 40px
+  &__title--red
+    color: var(--red_rimac)
 
 
-.thanks__paraph
-  font-family: 'Roboto'
-  font-style: normal
-  font-weight: 300
-  font-size: 16px
-  line-height: 28px
-  color: var(--gray_2)
+  &__paraphSection
+    margin-bottom: 40px
 
 
-.thanks__paraph--bold
-  font-weight: 400
+  &__paraph
+    font-family: 'Roboto'
+    font-style: normal
+    font-weight: 300
+    font-size: 16px
+    line-height: 28px
+    color: var(--gray_2)
+
+
+  &__paraph--bold
+    font-weight: 400
 
 
 
 @media (max-width:800px) 
-  .thanks__container
-    margin-top: 40px
-    width: 90%
-    max-width: 280px
-  
+  .thanks
+    grid-template-rows: 208px auto
+    grid-template-columns: 100%
 
-  .thanks__aside
-    background-image: url('/img/thanks_mobile.svg')
-    background-repeat: no-repeat
-    background-position: center
-    background-size: cover
-    border: none
-
+    &__container
+      margin-top: 40px
+      width: 90%
+      max-width: 280px
     
-    position: relative
-    grid-area: sidebar
-  
 
-  .thanks__asideImage
-    background-image: none
-    position: static
-    width: 0
-    height: 0
-  
+    &__aside
+      background-image: url('/img/thanks_mobile.svg')
+      background-repeat: no-repeat
+      background-position: center
+      background-size: cover
+      border: none
 
-  .thanks__title
-    font-size: 28px
+      
+      position: relative
+      // grid-area: sidebar
+    
+
+    &__asideImage
+      background-image: none
+      position: static
+      width: 0
+      height: 0
+    
+
+    &__title
+      font-size: 28px
   
   
 

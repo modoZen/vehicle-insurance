@@ -1,9 +1,13 @@
 .makeplan
+    display: grid
+    grid-template-columns: 30% 70%
+    grid-area: noHeader 
+    // grid-template-areas: "sidebar main"
 
     &__aside
         border-right: 1px solid #E4E8F7
         background-color: #F7F8FC
-        grid-area: sidebar
+        // grid-area: sidebar
         position: relative
 
 
@@ -205,6 +209,7 @@
         // display: flex
         // justify-content: center
         padding-top: 100px
+        padding-left: 15px
 
 
     &__types
@@ -293,3 +298,45 @@
 
     &__vineta
         margin-right: 20px
+
+@media (max-width: 800px)
+    .makeplan
+        display: grid
+        grid-template-columns: 100%
+        grid-area: noHeader 
+
+        &__aside
+            display: none
+        // &__secondSection
+
+        &__main
+            grid-template-columns: 100%
+
+        &__includedSection
+            max-width: 100%
+
+        &__secondSection
+            justify-self: center
+            display: flex
+            align-items: center
+            justify-content: space-between
+            padding: 15px 0px
+            width: 85%
+
+        &__types
+            width: 100%
+            max-width: unset
+
+        &__type
+            justify-content: center
+
+        &__coverages
+            display: grid
+            grid-template-columns: 100%
+        
+        &__includedSection
+            display: none
+            align-items: center
+        
+        &__mountTitle--name
+            display: none
