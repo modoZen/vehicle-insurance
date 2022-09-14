@@ -1,0 +1,29 @@
+.checkboxCustom 
+
+    &--input[type=checkbox]
+        display: none
+
+    &--input[type=checkbox] + &--label
+        cursor: pointer
+
+    &--label::before
+        content: ''
+        width: 20px
+        height: 20px
+        border: 1px solid #707070
+        border-radius: 5px
+        display: flex
+        justify-content: center
+        align-items: center
+    
+    &--input[type=checkbox]:checked + &--label::before
+        content: '✓'
+        background: #5CAC70
+        color: white
+        font-size: 15px
+        font-family: "Times New Roman"
+
+
+    &--input[type=checkbox]:disabled + &--label::before
+        background-color: #F7F7F7
+        cursor: default

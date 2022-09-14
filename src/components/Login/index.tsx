@@ -7,6 +7,7 @@ import { Button } from '../Button'
 import { Loader } from '../Loader'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import './styles.sass'
+import { CheckBox } from '../CheckBox'
 
 interface Option{
     value: string
@@ -123,7 +124,15 @@ export const Login = () => {
                 </label>
             </div>
             <span className='login__label login__label--condition'>
-                <input {...register('agreement', { required: 'Debe aceptar los terminos'})} type={'checkbox'} />
+                <CheckBox>
+                    <input 
+                        className='checkboxCustom--input' 
+                        {...register('agreement', { required: 'Debe aceptar los terminos'})} 
+                        type={'checkbox'} 
+                        id='agreement' 
+                    />
+                    <label htmlFor="agreement" className='checkboxCustom--label'></label>
+                </CheckBox>   
                 <span className='login__politics'>
                     Acepto la Política de <a className='login__links'>Protecciòn de Datos Personales</a> y los <a className='login__links'>Términos y Condiciones.</a> 
                 </span>
