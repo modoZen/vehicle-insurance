@@ -126,12 +126,12 @@ export const Login = () => {
             <span className='login__label login__label--condition'>
                 <CheckBox>
                     <input 
-                        className='checkboxCustom--input' 
+                        className='checkboxCustom__input' 
                         {...register('agreement', { required: 'Debe aceptar los terminos'})} 
                         type={'checkbox'} 
                         id='agreement' 
                     />
-                    <label htmlFor="agreement" className='checkboxCustom--label'></label>
+                    <label htmlFor="agreement" className='checkboxCustom__label'></label>
                 </CheckBox>   
                 <span className='login__politics'>
                     Acepto la Política de <a className='login__links'>Protecciòn de Datos Personales</a> y los <a className='login__links'>Términos y Condiciones.</a> 
