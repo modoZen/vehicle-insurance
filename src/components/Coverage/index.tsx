@@ -7,6 +7,7 @@ import icon_arrow_up from '../../assets/icon_arrow_up.svg'
 import ic_add from '../../assets/ic_add.svg'
 import ic_remove from '../../assets/ic_remove.svg'
 import './styles.sass'
+import { SwitchCustom } from '../SwitchCustom'
 
 interface Props{
     title: string,
@@ -41,6 +42,7 @@ export const Coverage:FC<Props> = ({title, info, src, price}) => {
                 alt={showInfo?'mostrando info':'ocultando info'} 
                 onClick={toggleInfoCoverage}
             />
+            <SwitchCustom checked={showInfo} onClick={toggleInfoCoverage} />
             <div className='coverage__addSection' onClick={()=>{handlerClick({title,info, src, price})}}>
                 <img className='coverage__addImage' src={isAdded?ic_remove:ic_add} alt="agregar" />
                 <span className='coverage__addText'>{isAdded?'QUITAR':'AGREGAR'}</span>

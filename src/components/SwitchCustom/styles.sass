@@ -1,0 +1,49 @@
+.switchCustom
+    position: absolute
+    right: 0px
+    top: 32px
+    margin: 0
+    padding: 0
+    color: #000000d9
+    font-size: 14px
+    display: none
+    box-sizing: border-box
+    min-width: 44px
+    height: 22px
+    background-color: #E4E8F7
+    border: 0
+    border-radius: 100px
+    cursor: pointer
+    transition: all .2s
+
+    &--checked
+        background: #7CC954
+
+    &__circle
+        position: absolute
+        top: 2px
+        left: 2px
+        width: 18px
+        height: 18px
+        transition: all .2s ease-in-out
+        background-color: #fff
+        border-radius: 9px
+        &--checked
+            left: calc(100% - 20px)
+
+        // &::before
+        //     position: absolute
+        //     top: 0
+        //     right: 0
+        //     bottom: 0
+        //     left: 0
+        //     background-color: #fff
+        //     border-radius: 9px
+        //     box-shadow: 0 2px 4px #00230b33
+        //     transition: all .2s ease-in-out
+        //     content: ""
+        
+
+@media (max-width: 800px)
+    .switchCustom
+        display: inline-block
